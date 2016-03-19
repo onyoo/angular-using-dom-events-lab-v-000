@@ -16,9 +16,11 @@ function Counter() {
 				ctrl.count++;
 				// console.log(ctrl.count);
 				scope.$apply();
+				scope.$destroy()
 			});
 			scope.$on('$destroy', function () {
-          //  element.off();
+					// alert('done');
+					 element.off();
         });
 		}
 	}
